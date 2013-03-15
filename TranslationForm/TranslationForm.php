@@ -32,6 +32,7 @@ class TranslationForm
     {
         $defaultLocale = $this->translatableListener->getDefaultLocale();
 
+        $distinctLocales = array();
         foreach ($locales as $locale) {
             if ($defaultLocale !== $locale) {
                 $distinctLocales['translations'][] = $locale;
